@@ -8,7 +8,7 @@
       <link href="/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/"/>
       <url>/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/</url>
       
-        <content type="html"><![CDATA[<p>  Java是使用“访问控制符”来控制哪些细节需要封装，哪些细节需要暴露的。 Java中4种“访问控制符”分别为private、default、protected、public，它们说明了面向对象的封装性，所以我们要利用它们尽可能的让访问权限降到最低，从而提高安全性。<br>  <img src="https://img-blog.csdnimg.cn/20200217092002314.png" alt="在这里插入图片描述"></p><ol><li><p>private 表示私有，只有自己类能访问</p><ol start="2"><li><p>default 表示没有修饰符修饰，只有同一个包的类能访问</p></li><li><p>protected 表示可以被同一个包的类以及其他包中的子类访问</p></li><li><p>public 表示可以被该项目的所有包中的所有类访问</p></li></ol></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>  Java中的修饰符可修饰类、属性、方法</p><p>  Java是使用“访问控制符”来控制哪些细节需要封装，哪些细节需要暴露的。 Java中4种“访问控制符”分别为private、default、protected、public，它们说明了面向对象的封装性，所以我们要利用它们尽可能的让访问权限降到最低，从而提高安全性。<br>  <img src="https://img-blog.csdnimg.cn/20200217092002314.png" alt="在这里插入图片描述"></p><ol><li><p>private 表示私有，只有自己类能访问</p><ol start="2"><li><p>default 表示没有修饰符修饰，只有同一个包的类能访问</p></li><li><p>protected 表示可以被同一个包的类以及其他包中的子类访问</p></li><li><p>public 表示可以被该项目的所有包中的所有类访问</p></li></ol></li></ol>]]></content>
       
       
       

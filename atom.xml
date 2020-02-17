@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangxuelee.github.io/"/>
-  <updated>2020-02-17T02:28:26.252Z</updated>
+  <updated>2020-02-17T02:35:29.480Z</updated>
   <id>http://zhangxuelee.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://zhangxuelee.github.io/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/"/>
     <id>http://zhangxuelee.github.io/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/</id>
     <published>2020-02-17T02:28:18.991Z</published>
-    <updated>2020-02-17T02:28:26.252Z</updated>
+    <updated>2020-02-17T02:35:29.480Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,10 @@
       
         
         
-          &lt;p&gt;  Java中的修饰符可修饰类、属性、方法&lt;/p&gt;
-&lt;p&gt;  Java是使用“访问控制符”来控制哪些细节需要封装，哪些细节需要暴露的。
+          &lt;p&gt;  Java中的修饰符可修饰类、属性、方法&lt;br&gt;      ==类==的属性的处理:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  1. 一般使用private访问权限。
+
+  2. 
         
       
     

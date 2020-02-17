@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>封装的实现—使用访问控制符</title>
+      <link href="/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/"/>
+      <url>/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/</url>
+      
+        <content type="html"><![CDATA[<p>  Java是使用“访问控制符”来控制哪些细节需要封装，哪些细节需要暴露的。 Java中4种“访问控制符”分别为private、default、protected、public，它们说明了面向对象的封装性，所以我们要利用它们尽可能的让访问权限降到最低，从而提高安全性。<br>  <img src="https://img-blog.csdnimg.cn/20200217092002314.png" alt="在这里插入图片描述"></p><ol><li><p>private 表示私有，只有自己类能访问</p><ol start="2"><li><p>default 表示没有修饰符修饰，只有同一个包的类能访问</p></li><li><p>protected 表示可以被同一个包的类以及其他包中的子类访问</p></li><li><p>public 表示可以被该项目的所有包中的所有类访问</p></li></ol></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>== 和 equals 的区别</title>
+      <link href="/2020/02/17/he-equals-de-qu-bie/"/>
+      <url>/2020/02/17/he-equals-de-qu-bie/</url>
+      
+        <content type="html"><![CDATA[<p>equals和==的区别:</p><ol><li>= =号在比较基本数据类型时比较的是值，而用= =号==比较两个对象时比较的是两个对象的地址值==</li><li>equals()方法存在于Object类中，因为Object类是所有类的直接或间接父类，也就是说所有的类中的equals()方法都继承自Object类，而通过源码我们发现，Object类中equals()方法底层依赖的是= =号，那么，在所有没有重写equals()方法的类中，调用equals()方法其实和使用= =号的效果一样，也是比较的地址值，然而，Java提供的所有类中，绝大多数类都重写了equals()方法，==重写后的equals()方法一般都是比较两个对象的值==</li></ol><p>JVM在内存中的分配<br>        在JVM中，内存分为堆内存(堆内存中有方法区：方法区存储类信息)跟栈内存。他们二者的区别是： 当我们创建一个对象（new Object）时，就会调用对象的构造函数来开辟空间，将对象数据存储到堆内存中，与此同时在栈内存中生成对应的引用，当我们在后续代码中调用的时候用的都是栈内存中的引用。还需注意的一点，基本数据类型是存储在栈内存中。</p><p>==认识equals与= =的区别：==<br> ==是判断两个变量或实例是不是指向同一个内存空间，equals是判断两个变量或实例所指向的内存空间的值是不是相同<br>==是指对内存地址进行比较 ， equals()是对字符串的内容进行比较<br>==指引用是否相同， equals()指的是值是否相同<br> 用一张图可以简要的表现他们之间的关系：<br><img src="https://img-blog.csdnimg.cn/20200217080209156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUxMjI4MQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>上传命令</title>
       <link href="/2020/02/09/shang-chuan-ming-ling/"/>
       <url>/2020/02/09/shang-chuan-ming-ling/</url>

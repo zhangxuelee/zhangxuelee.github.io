@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangxuelee.github.io/"/>
-  <updated>2020-02-09T12:49:03.339Z</updated>
+  <updated>2020-02-17T01:34:02.482Z</updated>
   <id>http://zhangxuelee.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>封装的实现—使用访问控制符</title>
+    <link href="http://zhangxuelee.github.io/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/"/>
+    <id>http://zhangxuelee.github.io/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/</id>
+    <published>2020-02-17T01:33:55.204Z</published>
+    <updated>2020-02-17T01:34:02.482Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;  Java是使用“访问控制符”来控制哪些细节需要封装，哪些细节需要暴露的。
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>== 和 equals 的区别</title>
+    <link href="http://zhangxuelee.github.io/2020/02/17/he-equals-de-qu-bie/"/>
+    <id>http://zhangxuelee.github.io/2020/02/17/he-equals-de-qu-bie/</id>
+    <published>2020-02-17T00:14:08.710Z</published>
+    <updated>2020-02-17T00:14:16.573Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;equals和==的区别:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;= =号在比较基本数据类型时比较的是值，而用=
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>上传命令</title>

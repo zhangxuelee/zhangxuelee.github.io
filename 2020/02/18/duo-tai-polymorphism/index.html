@@ -4,11 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="封装的实现—使用访问控制符, Hexo">
-    <meta name="description" content="  Java中的修饰符可修饰类、属性、方法      ==类==的属性的处理:
-  1. 一般使用private访问权限。
-
-  2.  提供相应的get/set方法来访问相关属性，这些方法通常是public修饰的，以提供对属性的赋值与读取">
+    <meta name="keywords" content="多态(polymorphism), Hexo">
+    <meta name="description" content="==多态指的是同一个方法调用，由于对象不同可能会有不同的行为==
+现实生活中，同一个方法，具体实现会完全不同。 比如：同样是调用人的“休息”方法，张三是睡觉，李四是旅游，高淇老师是敲代码，数学教授是做数学题; 同样是调用人“吃饭”的方法，中">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>封装的实现—使用访问控制符 | Hexo</title>
+    <title>多态(polymorphism) | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -307,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">封装的实现—使用访问控制符</h1>
+                    <h1 class="description center-align post-title">多态(polymorphism)</h1>
                 </div>
             </div>
         </div>
@@ -441,7 +439,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-17
+                    2020-02-18
                 </div>
                 
 
@@ -458,23 +456,15 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>  Java中的修饰符可修饰类、属性、方法<br>      ==类==的属性的处理:</p>
-<pre><code>  1. 一般使用private访问权限。
+                <p>==多态指的是同一个方法调用，由于对象不同可能会有不同的行为==</p>
+<p>现实生活中，同一个方法，具体实现会完全不同。 比如：同样是调用人的“休息”方法，张三是睡觉，李四是旅游，高淇老师是敲代码，数学教授是做数学题; 同样是调用人“吃饭”的方法，中国人用筷子吃饭，英国人用刀叉吃饭，印度人用手吃饭。</p>
+<pre><code>  多态的要点：
 
-  2.  提供相应的get/set方法来访问相关属性，这些方法通常是public修饰的，以提供对属性的赋值与读取操作(注意：boolean变量的get方法是is开头!)。
+  1. 多态是方法的多态，不是属性的多态(多态与属性无关)。
 
-  3. 一些只用于本类的辅助性方法可以用private修饰，希望其他类调用的方法用public修饰。</code></pre><p>  Java是使用“访问控制符”来控制哪些细节需要封装，哪些细节需要暴露的。 Java中4种“访问控制符”分别为private、default、protected、public，它们说明了面向对象的封装性，所以我们要利用它们尽可能的让访问权限降到最低，从而提高安全性。<br>  <img src="https://img-blog.csdnimg.cn/20200217092002314.png" alt="在这里插入图片描述"></p>
-<ol>
-<li><p>private 表示私有，只有自己类能访问</p>
-</li>
-<li><p>default 表示没有修饰符修饰，只有同一个包的类能访问</p>
-</li>
-<li><p>protected 表示可以被同一个包的类以及其他包中的子类访问</p>
-</li>
-<li><p>public 表示可以被该项目的所有包中的所有类访问</p>
-</li>
-</ol>
+  2. 多态的存在要有3个必要条件：继承，方法重写，父类引用指向子类对象。
 
+  3. 父类引用指向子类对象后，用该父类引用调用子类重写的方法，此时多态就出现了。</code></pre>
             </div>
             <hr/>
 
@@ -499,7 +489,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhangxuelee.github.io/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/">http://zhangxuelee.github.io/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/</a>
+                    <a href="http://zhangxuelee.github.io/2020/02/18/duo-tai-polymorphism/">http://zhangxuelee.github.io/2020/02/18/duo-tai-polymorphism/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -704,21 +694,21 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/18/fang-fa-de-chong-xie-he-chong-zai/">
+                <a href="/2020/02/18/nei-bu-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="方法的重写和重载">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="内部类">
                         
-                        <span class="card-title">方法的重写和重载</span>
+                        <span class="card-title">内部类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ==一、方法重写(0veriding)==
-子类可以定义新的特征，当子类需要修改父类的一些方法进行扩展，增大功能，这样的一种操作方法称为重写
-子类既可以隐藏和访问父类的方法，也可以覆盖继承父类的方法。覆盖继承父类的方法就是通过方法的重写来实
+                            把一个类放在另一个类的内部定义，称为内部类
+内部类可以使用public、default、protected 、private以及static修饰。而外部顶级类只能使用public和default修饰。
+内部类是相对独立的一种存在，其成员变量
                         
                     </div>
                     <div class="publish-info">
@@ -743,27 +733,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/17/he-equals-de-qu-bie/">
+                <a href="/2020/02/18/fang-fa-de-chong-xie-he-chong-zai/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="== 和 equals 的区别">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="方法的重写和重载">
                         
-                        <span class="card-title">== 和 equals 的区别</span>
+                        <span class="card-title">方法的重写和重载</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            equals和==的区别:
-
-= =号在比较基本数据类型时比较的是值，而用= =号==比较两个对象时比较的是两个对象的地址值==
-equals()方法存在于Object类中，因为Object类是所有类的直接或间接父类，也就是说所有的类中的e
+                            ==一、方法重写(0veriding)==
+子类可以定义新的特征，当子类需要修改父类的一些方法进行扩展，增大功能，这样的一种操作方法称为重写
+子类既可以隐藏和访问父类的方法，也可以覆盖继承父类的方法。覆盖继承父类的方法就是通过方法的重写来实
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
                             </span>
                         <span class="publish-author">
                             

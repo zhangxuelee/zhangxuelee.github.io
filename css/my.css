@@ -56,3 +56,12 @@
         transform: translate(0, 0.5px) rotate(1.5deg);
     }
 }
+
+@media only screen and (max-width: 601px){
+.bg-covers{
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size: cover;
+bottom: 0px;
+}
+}

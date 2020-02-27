@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>张雪蕾的博客</title>
+  <title>Lee</title>
   <icon>https://www.gravatar.com/avatar/e2cc9657d9a526367d0a318c61caa751</icon>
-  <subtitle>知者乐水，仁者乐山</subtitle>
+  <subtitle>Lee笔记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangxuelee.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://zhangxuelee.github.io/</id>
   
   <author>
-    <name>张雪蕾</name>
+    <name>Lee</name>
     <email>2660230308@qq.com</email>
   </author>
   

@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Lee,github">
-    <meta name="description" content="Lee">
+    <meta name="description" content="记录一些杂七杂八的东西~">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,6 +13,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
     <title>Lee</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -23,12 +26,9 @@
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-    
+
     <script src="/libs/jquery/jquery.min.js"></script>
-
-
-<link rel="stylesheet" type="text/css" href="assets/waifu.css"/>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>    
+    
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Lee" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
@@ -337,7 +337,7 @@
     }
 
     .carousel-control:hover {
-        background-color:rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .4);
     }
 
     .carousel-control i {
@@ -351,7 +351,7 @@
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
 
-    <div class="carousel-item  white-text bg-cover about-cover">
+    <div class="carousel-item red white-text bg-cover about-cover">
         <div class="container">
             <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -402,17 +402,15 @@
                 
             </div>
             <div class="cover-social-link">
-    <a href="https://github.com/https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="https://www.linkedin.com/in/1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我:" data-position="top" data-delay="50">
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
-
-
 
 
 
@@ -442,18 +440,40 @@
 </div>
 
 <script>
+    // TODO 此处的轮播尚需优化，PC/Mobile 在触摸切换时都感觉相当不灵活
     $(function () {
         let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
         coverSlider.carousel({
             duration: Number('120'),
             fullWidth: true,
-            indicators: 'true' === 'true'
-        });
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
 
         let carouselIntervalId;
         
         // Loop to call the next cover article picture.
-        let autoCarousel = function() {
+        let autoCarousel = function () {
             carouselIntervalId = setInterval(function () {
                 coverSlider.carousel('next');
             }, 5000);
@@ -461,7 +481,7 @@
         autoCarousel();
         
 
-        let restartPlay = function () {
+        function restartPlay() {
             
             clearInterval(carouselIntervalId);
             autoCarousel();
@@ -484,35 +504,6 @@
 
 
 
-
-<main class="content">
-    <input placeholder="和她聊天" id="talk"/>
-        <form id="uploadForm">
-        <input type="file" name="file"/>
-        </form>
-    <div class="waifu">
-        <div class="waifu-tips"></div>
-        <canvas id="live2d" width="300" height="400" class="live2d"></canvas>
-        <script type="text/javascript">
-            var message_Path = '/assets/'
-            var home_Path = 'https://www.rua.kim/'
-            </script>
-        <div class="waifu-tool">
-            <span class="fui-home"></span>
-            <span class="fui-chat"></span>
-            <span class="fui-eye"></span>
-            <span class="fui-user"></span>
-            <span class="fui-photo"></span>
-            <span class="fui-info-circle"></span>
-            <span class="fui-cross"></span>
-        </div>
-    </div>
-
-    <script src="assets/waifu-tips.js"></script>
-    <script src="assets/live2d.js"></script>
-    <script type="text/javascript">initModel("assets/")</script>
-
-
 <main class="content">
 
     
@@ -524,13 +515,9 @@
                         <div class="dream">
     
     <div class="title center-align">
-        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;我的梦想
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
     </div>
-    <div style="width:250px; position:relative; margin:0 auto;"> #丢在标题下面 调整好位置
-        <img src="https://cdn.jsdelivr.net/gh/Nyaplus-Beta/cdn@2.5/images/loading.webp"> #改为自己的图片地址
-    </div>
-
-
+    
     <div class="row">
         <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
             不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
@@ -539,37 +526,6 @@
 </div>
                     
 
-                    
-                        
-
-<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<div class="music-player">
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s12">
-            <div id="aplayer" class="music"></div>
-        </div>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script>
-$(function () {
-    new APlayer({
-        container: document.getElementById('aplayer'),
-        fixed: 'false' === 'true',
-        autoplay: 'false' === 'true',
-        theme: '#42b983',
-        loop: 'all',
-        order: 'list',
-        preload: 'auto',
-        volume: Number('0.7'),
-        listFolded: 'false' === 'true',
-        listMaxHeight: '',
-        audio: eval([{"name":"五月雨变奏电音","artist":"AnimeVibe","url":"http://xxx.com/music1.mp3","cover":"http://xxx.com/music-cover1.png"},{"name":"Take me hand","artist":"DAISHI DANCE,Cecile Corbel","url":"/medias/music/music2.mp3","cover":"/medias/music/cover2.png"},{"name":"Shape of You","artist":"J.Fla","url":"http://xxx.com/music3.mp3","cover":"http://xxx.com/music-cover3.png"}])
-    });
-});
-</script>
                     
 
                     
@@ -590,21 +546,19 @@ $(function () {
 
     
 
-    
-
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/18/nei-bu-lei/">
+                    <a href="/2020/02/18/nei-bu-lei/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="内部类">
                             
-                            <!-- <span class="card-title">内部类</span> -->
+                            <span class="card-title">内部类</span>
                         </div>
                     </a>
 
@@ -635,13 +589,13 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/18/duo-tai-polymorphism/">
+                    <a href="/2020/02/18/duo-tai-polymorphism/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="多态(polymorphism)">
                             
-                            <!-- <span class="card-title">多态(polymorphism)</span> -->
+                            <span class="card-title">多态(polymorphism)</span>
                         </div>
                     </a>
 
@@ -671,13 +625,13 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/18/fang-fa-de-chong-xie-he-chong-zai/">
+                    <a href="/2020/02/18/fang-fa-de-chong-xie-he-chong-zai/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="方法的重写和重载">
                             
-                            <!-- <span class="card-title">方法的重写和重载</span> -->
+                            <span class="card-title">方法的重写和重载</span>
                         </div>
                     </a>
 
@@ -708,13 +662,13 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/">
+                    <a href="/2020/02/17/feng-zhuang-de-shi-xian-shi-yong-fang-wen-kong-zhi-fu/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="封装的实现—使用访问控制符">
                             
-                            <!-- <span class="card-title">封装的实现—使用访问控制符</span> -->
+                            <span class="card-title">封装的实现—使用访问控制符</span>
                         </div>
                     </a>
 
@@ -746,13 +700,13 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/17/he-equals-de-qu-bie/">
+                    <a href="/2020/02/17/he-equals-de-qu-bie/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="== 和 equals 的区别">
                             
-                            <!-- <span class="card-title">== 和 equals 的区别</span> -->
+                            <span class="card-title">== 和 equals 的区别</span>
                         </div>
                     </a>
 
@@ -784,13 +738,13 @@ equals()方法存在于Object类中，因为Object类是所有类的直接或间
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/09/shang-chuan-ming-ling/">
+                    <a href="/2020/02/09/shang-chuan-ming-ling/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="上传命令">
                             
-                            <!-- <span class="card-title">上传命令</span> -->
+                            <span class="card-title">上传命令</span>
                         </div>
                     </a>
 
@@ -823,13 +777,13 @@ equals()方法存在于Object类中，因为Object类是所有类的直接或间
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/09/csdn-shi-yong-zhi-nan/">
+                    <a href="/2020/02/09/csdn-shi-yong-zhi-nan/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CSDN使用指南">
                             
-                            <!-- <span class="card-title">CSDN使用指南</span> -->
+                            <span class="card-title">CSDN使用指南</span>
                         </div>
                     </a>
 
@@ -860,13 +814,13 @@ equals()方法存在于Object类中，因为Object类是所有类的直接或间
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/04/wo-de-di-yi-pian-bo-ke-wen-zhang/">
+                    <a href="/2020/02/04/wo-de-di-yi-pian-bo-ke-wen-zhang/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="我的第一篇博客文章">
                             
-                            <!-- <span class="card-title">我的第一篇博客文章</span> -->
+                            <span class="card-title">我的第一篇博客文章</span>
                         </div>
                     </a>
 
@@ -899,13 +853,13 @@ equals()方法存在于Object类中，因为Object类是所有类的直接或间
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/04/hello-hexo/">
+                    <a href="/2020/02/04/hello-hexo/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="hello,Hexo">
                             
-                            <!-- <span class="card-title">hello,Hexo</span> -->
+                            <span class="card-title">hello,Hexo</span>
                         </div>
                     </a>
 
@@ -937,13 +891,13 @@ equals()方法存在于Object类中，因为Object类是所有类的直接或间
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a target="_blank" href="/2020/02/04/hello-world/">
+                    <a href="/2020/02/04/hello-world/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                             
-                            <!-- <span class="card-title">Hello World</span> -->
+                            <span class="card-title">Hello World</span>
                         </div>
                     </a>
 
@@ -979,11 +933,58 @@ equals()方法存在于Object类中，因为Object类是所有类的直接或间
 
 
     <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
-            <span id="sitetime"></span>
-            <span id="year">2020</span>
+            <span id="year">2019</span>
             <a href="http://zhangxuelee.github.io" target="_blank">Lee</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
@@ -999,35 +1000,27 @@ equals()方法存在于Object类中，因为Object类是所有类的直接或间
                     class="white-color"></span>&nbsp;次
             </span>
             
-                  
-    <span id="busuanzi_container_site_pv" style='display:none'></span>
-        <i class="fa fa-heart-o"></i>
-        本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
-
-
-
-
-    <span id="busuanzi_container_site_uv" style='display:none'></span>
-        人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
-    
-
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
             <br>
             
             <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="https://www.linkedin.com/in/1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我:" data-position="top" data-delay="50">
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
-
-
 
 
 
@@ -1054,63 +1047,6 @@ equals()方法存在于Object类中，因为Object类是所有类的直接或间
 </footer>
 
 <div class="progress-bar"></div>
-
-<script language=javascript>
-    function siteTime() {
-        window.setTimeout("siteTime()", 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth() + 1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-        year - 作为date对象的年份，为4位年份值
-        month - 0-11之间的整数，做为date对象的月份
-        day - 1-31之间的整数，做为date对象的天数
-        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-        minutes - 0-59之间的整数，做为date对象的分钟数
-        seconds - 0-59之间的整数，做为date对象的秒数
-        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-        var diff = t2 - t1;
-        var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-        document.getElementById("sitetime").innerHTML = "本站已运行 " +diffYears+" 年 "+diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
-    siteTime();
-</script>
-
-
-<script>
-    $(document).ready(function () {
-
-        var int = setInterval(fixCount, 50);  // 50ms周期检测函数
-        var pvcountOffset = 80000;  // 初始化首次数据
-        var uvcountOffset = 20000;
-
-        function fixCount() {
-            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
-                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
-                clearInterval(int);
-            }
-            if ($("#busuanzi_container_site_pv").css("display") != "none") {
-                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
-                clearInterval(int); // 停止检测
-            }
-        }
-    });
-</script>
 
 
     <!-- 搜索遮罩框 -->
@@ -1145,9 +1081,6 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
 
     <!-- Baidu Analytics -->
 

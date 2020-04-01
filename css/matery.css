@@ -34,23 +34,16 @@
 }
 
 body {
-    background-image: "https://cdn.jsdelivr.net/gh/Nyaplus-Beta/cdn@2.5/images/loading.webp"
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-position:center;
-    background-size: cover;
-    margin:0 auto;
-注释掉的属性
-    @-webkit-keyframes rainbow
+    background-color: #eaeaea;
+    margin: 0;
+    color: #34495e;
 }
-
 
 h1 {
     margin: 48px 0 22px -5px;
     font-size: 2.0rem;
     font-weight: bold;
     line-height: 2.0rem;
-    text-align: center;
 }
 
 h2 {
@@ -58,7 +51,6 @@ h2 {
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 1.8rem;
-    text-align: center;
 }
 
 h3 {
@@ -66,7 +58,6 @@ h3 {
     font-size: 1.6rem;
     font-weight: bold;
     line-height: 1.7rem;
-    text-align: center;
 }
 
 h4 {
@@ -74,7 +65,6 @@ h4 {
     font-size: 1.45rem;
     font-weight: bold;
     line-height: 1.45rem;
-    text-align: center;
 }
 
 h5 {
@@ -82,14 +72,12 @@ h5 {
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.2rem;
-    text-align: center;
 }
 
 h6 {
     margin: 22px 0 4px -4px;
     font-size: 1.1rem;
     line-height: 1.1rem;
-    text-align: center;
 }
 
 p {
@@ -184,7 +172,7 @@ code {
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
-} 
+}
 
 .code-expand {
     position: absolute;
@@ -253,6 +241,8 @@ mark {
 
 .card .card-image img {
     border-radius: 8px 8px 0 0;
+    /* 修改文章列表图片填充样式为 cover 以覆盖整个区域而不会被缩放 */
+    object-fit: cover;
 }
 
 .container .row {
@@ -567,7 +557,7 @@ header .go-back i {
 }
 
 .post-cover {
-    height: 100vh !important;
+    height: 40vh !important;
 }
 
 .bg-cover:after {
@@ -594,26 +584,17 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 3rem;
-    font-weight: 100%;
+    font-size: 4rem;
     line-height: 1.85em;
-    top: 270px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     position: relative;
-    background-color: rgba(000, 000, 00, 0.4);
-    border-radius: 15px 15px 0px 0px;
-    margin: 0 auto;
 }
 
 .bg-cover .description {
-    font-size: 1.25rem;
     font-weight: 300;
+    font-size: 1.25rem;
     line-height: 1.4em;
-    color: #fff;
-    position: relative;
-    top: 270px;
-    background-color: rgba(000, 000, 00, 0.4);
-    border-radius: 0px 0px 15px 15px;
+    color: #eee;
 }
 
 .bg-cover .post-title {
@@ -924,7 +905,7 @@ article .card-image {
 }
 
 article .card-image img {
-    height: 100%;
+    height: 220px;
     border-radius: 0.3rem;
     opacity: .7;
 }
@@ -1048,11 +1029,10 @@ article .article-tags .chip {
     }
 }
 
-artDetail .card {
+#artDetail .card {
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15),
         0 5px 15px rgba(0, 0, 0, .07),
         0 2px 5px -5px rgba(0, 0, 0, .1) !important;
-    top: 6vh;
 }
 
 #artDetail .tag-cate {
@@ -1503,7 +1483,7 @@ thead {
     margin-left: 60px;
     padding: 0;
     border-radius: 5px;
-    <!-- background: #ffffff; -->
+    background: #ffffff;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }
 
@@ -2014,7 +1994,7 @@ footer .copy-right {
     /* absolute position */
     position: absolute;
     /* set position to right bottom corner of block */
-    right: 0;
+    right: 0.2em;
     bottom: 0;
 }
 
@@ -2029,7 +2009,8 @@ footer .copy-right {
     /* set width and height */
     width: 1em;
     height: 1em;
-    margin-top: 0.2em;
+    /* fix the problem of hidden failure */
+    margin-top: 0.4em;
     /* bg color = bg color under block */
     background: white;
 }
@@ -2152,18 +2133,4 @@ footer .copy-right {
     height: 50px;
     padding: 0px;
     margin: 0px;
-}
-
-.bg-covers {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    background-position: center center;
-    background-size: 100%;
-    transform: translate3d(0px, 0px, 0px);
-    width:210vh; 
-    height:100vh;
 }

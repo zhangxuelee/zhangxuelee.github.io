@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://zhangxuelee.gitee.io/blog/"/>
-  <updated>2022-06-17T07:21:59.622Z</updated>
+  <updated>2022-07-14T13:03:09.693Z</updated>
   <id>http://zhangxuelee.gitee.io/blog/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>前端基础</title>
-    <link href="http://zhangxuelee.gitee.io/blog/2022/07/12/qian-duan-ji-chu/"/>
-    <id>http://zhangxuelee.gitee.io/blog/2022/07/12/qian-duan-ji-chu/</id>
-    <published>2022-07-12T02:02:21.203Z</published>
-    <updated>2022-06-17T07:21:59.622Z</updated>
+    <title>前端复习大纲</title>
+    <link href="http://zhangxuelee.gitee.io/blog/2022/07/15/qian-duan-fu-xi-da-gang/"/>
+    <id>http://zhangxuelee.gitee.io/blog/2022/07/15/qian-duan-fu-xi-da-gang/</id>
+    <published>2022-07-15T08:24:26.697Z</published>
+    <updated>2022-07-14T13:03:09.693Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,30 @@
       
         
         
-          &lt;h1 id=&quot;前端基础&quot;&gt;&lt;a href=&quot;#前端基础&quot; class=&quot;headerlink&quot; title=&quot;前端基础&quot;&gt;&lt;/a&gt;前端基础&lt;/h1&gt;&lt;h2 id=&quot;1-Web标准&quot;&gt;&lt;a href=&quot;#1-Web标准&quot; class=&quot;headerlink&quot; title=&quot;1.
+          &lt;h1 id=&quot;前端复习大纲&quot;&gt;&lt;a href=&quot;#前端复习大纲&quot; class=&quot;headerlink&quot; title=&quot;前端复习大纲&quot;&gt;&lt;/a&gt;前端复习大纲&lt;/h1&gt;&lt;h2 id=&quot;1-Web标准&quot;&gt;&lt;a href=&quot;#1-Web标准&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSS基础</title>
+    <link href="http://zhangxuelee.gitee.io/blog/2022/07/15/css-ji-chu/"/>
+    <id>http://zhangxuelee.gitee.io/blog/2022/07/15/css-ji-chu/</id>
+    <published>2022-07-15T08:24:26.577Z</published>
+    <updated>2022-07-15T06:36:38.967Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CSS基础&quot;&gt;&lt;a href=&quot;#CSS基础&quot; class=&quot;headerlink&quot; title=&quot;CSS基础&quot;&gt;&lt;/a&gt;CSS基础&lt;/h1&gt;&lt;h2 id=&quot;1-CSS简介&quot;&gt;&lt;a href=&quot;#1-CSS简介&quot; class=&quot;headerlink&quot;
         
       
     
@@ -44,7 +67,7 @@
     <link href="http://zhangxuelee.gitee.io/blog/2022/06/18/html-ji-chu/"/>
     <id>http://zhangxuelee.gitee.io/blog/2022/06/18/html-ji-chu/</id>
     <published>2022-06-18T08:54:23.071Z</published>
-    <updated>2022-07-11T14:21:56.933Z</updated>
+    <updated>2022-07-13T07:31:31.155Z</updated>
     
     <summary type="html">
     

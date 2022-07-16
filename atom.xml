@@ -245,9 +245,9 @@
         
         
           &lt;p&gt;  Java中的修饰符可修饰类、属性、方法&lt;br&gt;      ==类==的属性的处理:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;1. 一般使用private访问权限。
+&lt;pre&gt;&lt;code&gt;  1. 一般使用private访问权限。
 
-2. 
+  2. 
         
       
     
